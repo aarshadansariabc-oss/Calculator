@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,11 +17,12 @@ body{
     justify-content: center;
     align-items: center;
     /* background-color: rgb(6, 7, 52); */
-    background-color: black;
+    background-color: rgb(128, 123, 123);
 }
 .calculator{
     padding: 20px;
-    background-color: transparent;
+    background-color: black;
+    /* background-color: transparent; */
     border-radius: 15px;
     box-shadow: 0 0 15px rgb(255, 255, 255);
     border: 1px solid white;
@@ -29,19 +34,23 @@ input{
     padding: 20px;
     background-color: rgb(57, 56, 56);
     text-align: right;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
     border-radius: 14px;
     margin-bottom: 20px;
+    color: white;
+
 }
 input::placeholder{
     color: white;
 }
-button{
-    width: 60px;
-    height: 60px;
+.btn{
+   
+    width: 64px;
+    height: 64px;
     border: none;
     margin: 10px;
+    margin-left: 15px;
     border-radius: 15px;
     font-size: 20px;
     cursor: pointer;
@@ -49,10 +58,21 @@ button{
     color: white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-.skey{
-    background-color: #F54927;
+ .skey{
+    background-color: #d66f00;
+    width: 64px;
+    height: 64px;
+    border: none;
+    margin: 10px;
+    margin-left: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 01px rgba(255, 255, 255, 0.5);
 }
-button:hover{
+.btn:hover{
     scale: 1.1;
     background-color: aliceblue;
     color: black;
@@ -60,7 +80,23 @@ button:hover{
     font-size: 22px;
     font-weight: bold;
 }
-button:active{
+.skey:hover{
+    scale: 1.1;
+    background-color: #ff9a3d;
+    color: black;
+    transition: .2s;
+    font-size: 22px;
+    font-weight: bold;
+}
+.skey:active{
+    transition: .2s;
+    scale: 0.9;
+}
+.btn:active{
     transition: .1s;
     scale: 0.9;
+}
+input:active{
+    transition: .2s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
