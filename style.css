@@ -75,10 +75,11 @@ input::placeholder {
 
 /* Hover & Active States */
 .btn:hover {
+  
   scale: 1.1;
   background-color: aliceblue;
   color: black;
-  transition: 0.2s;
+  /* transition: 0.2s; */
   font-size: 22px;
   font-weight: bold;
 }
@@ -98,6 +99,7 @@ input::placeholder {
 }
 
 .btn:active {
+  border-radius: 15px;
   transition: 0.1s;
   scale: 0.9;
 }
