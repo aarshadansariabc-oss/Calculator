@@ -1,102 +1,171 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
-}
-
-* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: rgb(6, 7, 52); */
-    background-color: rgb(128, 123, 123);
-}
-.calculator{
-    padding: 20px;
-    background-color: black;
-    /* background-color: transparent; */
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgb(255, 255, 255);
-    border: 1px solid white;
-}
-input{
-    width: 100%;
-    height: 110px;
-    border: none;
-    padding: 20px;
-    background-color: rgb(57, 56, 56);
-    text-align: right;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 14px;
-    margin-bottom: 20px;
-    color: white;
 
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(128, 123, 123);
 }
-input::placeholder{
-    color: white;
+
+.calculator {
+  padding: 20px;
+  background-color: black;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+  border: 1px solid white;
+  max-width: 100%;
 }
-.btn{
-   
-    width: 64px;
-    height: 64px;
-    border: none;
-    margin: 10px;
-    margin-left: 15px;
-    border-radius: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+input {
+  width: 100%;
+  height: 110px;
+  border: none;
+  padding: 20px;
+  background-color: rgb(57, 56, 56);
+  text-align: right;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  color: white;
 }
- .skey{
-    background-color: #d66f00;
-    width: 64px;
-    height: 64px;
-    border: none;
-    margin: 10px;
-    margin-left: 20px;
-    border-radius: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 0 01px rgba(255, 255, 255, 0.5);
+
+input::placeholder {
+  color: white;
 }
-.btn:hover{
-    scale: 1.1;
-    background-color: aliceblue;
-    color: black;
-    transition: .2s;
+
+.btn {
+  width: 64px;
+  height: 64px;
+  border: none;
+  margin: 10px;
+  margin-left: 15px;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.skey {
+  background-color: #d66f00;
+  width: 64px;
+  height: 64px;
+  border: none;
+  margin: 10px;
+  margin-left: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Hover & Active States */
+.btn:hover {
+  scale: 1.1;
+  background-color: aliceblue;
+  color: black;
+  transition: 0.2s;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.skey:hover {
+  scale: 1.1;
+  background-color: #ff9a3d;
+  color: black;
+  transition: 0.2s;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.skey:active {
+  transition: 0.2s;
+  scale: 0.9;
+}
+
+.btn:active {
+  transition: 0.1s;
+  scale: 0.9;
+}
+
+input:active {
+  transition: 0.2s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ------------------ */
+/* RESPONSIVENESS */
+/* ------------------ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .btn, .skey {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    margin: 8px;
+  }
+
+  input {
+    height: 90px;
+    font-size: 26px;
+  }
+}
+
+/* Mobiles (like S22 Ultra, iPhones etc.) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .calculator {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  .btn, .skey {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    margin: 6px;
+  }
+
+  input {
+    height: 80px;
     font-size: 22px;
-    font-weight: bold;
+    padding: 15px;
+  }
 }
-.skey:hover{
-    scale: 1.1;
-    background-color: #ff9a3d;
-    color: black;
-    transition: .2s;
-    font-size: 22px;
-    font-weight: bold;
-}
-.skey:active{
-    transition: .2s;
-    scale: 0.9;
-}
-.btn:active{
-    transition: .1s;
-    scale: 0.9;
-}
-input:active{
-    transition: .2s;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+
+/* Very Small Screens */
+@media (max-width: 400px) {
+  .calculator {
+    max-width: 300px;
+  }
+
+  .btn, .skey {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+  input {
+    height: 70px;
+    font-size: 20px;
+  }
 }
